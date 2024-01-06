@@ -1,15 +1,12 @@
 import openai
 import streamlit as st
-import toml
-
-secrets = toml.load(".streamlit/secrets.toml")
 
 st.title("Chat Bot (GPT-4)")
 
 connection = {
-    "api_key": secrets["API_KEY"],
+    "api_key": "",
     "api_version": "2023-05-15",
-    "azure_endpoint": secrets["API_BASE"],
+    "azure_endpoint": "",
 }
 
 openai_api_key = st.sidebar.text_input('OpenAI API Key', type='password')
